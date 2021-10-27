@@ -1,0 +1,24 @@
+Algoritma menghitung jarak antar hari
+{I.F User memasukkan 2 buah tanggal (dd:mm:yy)}
+{F.S Menampilkan jarak 2 buah tanggal tersebut dalam format tahun, bulan, hari}
+
+Kamus: 
+firstDate, firstMonth, firstYear, secondDate, secondMonth, secondYear : integer
+totalDayFromFirstDate, totalDayFromSecondDate, differenceDay, restDayOfTheYear : integer
+year, month, day : integer
+
+Algoritma: 
+input <- (firstDate, firstMonth, firstYear, secondDate, secondMonth, secondYear)
+
+totalDayFromFirstDate <- (firstYear*365) + (firstMonth*30) + firstDate
+totalDayFromSecondDate <- (secondYear*365) + (secondMonth*30) + secondDate
+
+differenceDay <- totalDayFromSecondDate - totalDayFromFirstDate
+
+year <- differenceDay div 365
+restDayOfTheYear <- differenceDay mod 365
+
+month = restDayOfTheYear div 30
+day = restDayOfTheYear mod 30
+
+output(year, 'tahun', month, 'bulan', day, 'hari')

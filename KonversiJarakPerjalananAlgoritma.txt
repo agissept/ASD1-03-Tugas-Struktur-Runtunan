@@ -1,0 +1,20 @@
+Algoritma konversi jarak perjalanan
+{ I.F User memasukkan jarak dalam satuan cm }
+{ F.S Menampilkan jarak dalam format km, m, cm }
+
+Kamus: 
+distanceInCM: integer
+restDistanceInCm: integer
+kilometer, meter, centimeter
+
+Algoritma: 
+
+input <- (distanceInCM)
+
+kilometer <- distanceInCM div 100000
+restDistanceInCm <- distanceInCM mod 100000
+
+meter <- restDistanceInCm div 100
+centimeter <- restDistanceInCm mod 100
+
+output(kilometer, 'km', meter, 'm', centimeter, 'cm')

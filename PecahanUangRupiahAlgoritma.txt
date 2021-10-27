@@ -1,0 +1,27 @@
+Algoritma pecahan uang rupiah
+{ I.F User memasukkan uang yang ingin dipecah }
+{ F.S Menampilkan pecahan dalam kelipatan 1000, 500, 100, 50, 25 }
+
+Kamus:
+uang: integer
+sisaUang: integer
+pecahan1000, pecahan500, pecahan100, pecahan50, pecahan25 : integer
+
+Algoritma
+input <- (uang)
+
+pecahan1000 <- uang div 1000
+sisaUang <- uang mod 1000
+
+pecahan500 <- sisaUang div 500
+sisaUang <- sisaUang mod 500
+
+pecahan100 <- sisaUang div 100
+sisaUang <- sisaUang mod 100
+
+pecahan50 <- sisaUang div 50
+sisaUang <- sisaUang mod 50
+
+pecahan25 <-= sisaUang div 25
+
+output(pecahan1000, 'pecahan 1000,', pecahan500, 'pecahan 500,', pecahan100, 'pecahan 100,', pecahan50, 'pecahan 50,', pecahan25, 'pecahan 25')
