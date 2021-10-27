@@ -2,24 +2,24 @@
 # I.F User memasukkan 2 buah tanggal (dd:mm:yy)
 # F.S Menampilkan jarak 2 buah tanggal tersebut dalam format tahun, bulan, hari
 
-firstDate = int(input('Masukkan tanggal pertama: '))
-firstMonth = int(input('Masukkan bulan pertama: '))
-firstYear = int(input('Masukkan tahun pertama: '))
+tanggalPertama = int(input('Masukkan tanggal pertama: '))
+bulanPertama = int(input('Masukkan bulan pertama: '))
+tahunPertama = int(input('Masukkan tahun pertama: '))
 
-secondDate = int(input('Masukkan tanggal kedua: '))
-secondMonth = int(input('Masukkan bulan kedua: '))
-secondYear = int(input('Masukkan tahun kedua: '))
+tanggalKedua = int(input('Masukkan tanggal kedua: '))
+bulanKedua = int(input('Masukkan bulan kedua: '))
+tahunKedua = int(input('Masukkan tahun kedua: '))
 
-totalDayFromFirstDate = (firstYear*365) + (firstMonth*30) + firstDate
-totalDayFromSecondDate = (secondYear*365) + (secondMonth*30) + secondDate
+totalHariDariTanggalPertama = (tahunPertama*365) + (bulanPertama*30) + tanggalPertama
+totalHariDariTanggalKedua = (tahunKedua*365) + (bulanKedua*30) + tanggalKedua
 
-differenceDay = totalDayFromSecondDate - totalDayFromFirstDate
+perbedaanHari = totalHariDariTanggalKedua - totalHariDariTanggalPertama
 
-year = differenceDay // 365
-restDayOfTheYear = differenceDay % 365
+tahun = perbedaanHari // 365
+sisaHariDariTahun = perbedaanHari % 365
 
-month = restDayOfTheYear // 30
-day = restDayOfTheYear % 30
+bulan = sisaHariDariTahun // 30
+hari = sisaHariDariTahun % 30
 
 
-print(year, 'tahun', month, 'bulan', day, 'hari')
+print(tahun, 'tahun', bulan, 'bulan', hari, 'hari')
