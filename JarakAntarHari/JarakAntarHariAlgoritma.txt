@@ -3,22 +3,22 @@ Algoritma menghitung jarak antar hari
 {F.S Menampilkan jarak 2 buah tanggal tersebut dalam format tahun, bulan, hari}
 
 Kamus: 
-firstDate, firstMonth, firstYear, secondDate, secondMonth, secondYear : integer
-totalDayFromFirstDate, totalDayFromSecondDate, differenceDay, restDayOfTheYear : integer
-year, month, day : integer
+tanggalPertama, bulanPertama, tahunPertama, tanggalKedua, bulanKedua, tahunKedua : integer
+totalHariDariTanggalPertama, totalHariDariTanggalKedua, perbedaanHari, sisaHariDariTahun : integer
+tahun, bulan, hari : integer
 
 Algoritma: 
-input <- (firstDate, firstMonth, firstYear, secondDate, secondMonth, secondYear)
+input <- (tanggalPertama, bulanPertama, tahunPertama, tanggalKedua, bulanKedua, tahunKedua)
 
-totalDayFromFirstDate <- (firstYear*365) + (firstMonth*30) + firstDate
-totalDayFromSecondDate <- (secondYear*365) + (secondMonth*30) + secondDate
+totalHariDariTanggalPertama <- (tahunPertama*365) + (bulanPertama*30) + tanggalPertama
+totalHariDariTanggalKedua <- (tahunKedua*365) + (bulanKedua*30) + tanggalKedua
 
-differenceDay <- totalDayFromSecondDate - totalDayFromFirstDate
+perbedaanHari = totalHariDariTanggalKedua - totalHariDariTanggalPertama
 
-year <- differenceDay div 365
-restDayOfTheYear <- differenceDay mod 365
+tahun <- perbedaanHari div 365
+sisaHariDariTahun <- perbedaanHari mod 365
 
-month = restDayOfTheYear div 30
-day = restDayOfTheYear mod 30
+month = sisaHariDariTahun div 30
+day = sisaHariDariTahun mod 30
 
-output(year, 'tahun', month, 'bulan', day, 'hari')
+output(tahun, 'tahun', bulan, 'bulan', hari, 'hari')
