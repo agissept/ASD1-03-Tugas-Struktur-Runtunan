@@ -3,18 +3,18 @@ Algoritma konversi jarak perjalanan
 { F.S Menampilkan jarak dalam format km, m, cm }
 
 Kamus: 
-distanceInCM: integer
-restDistanceInCm: integer
-kilometer, meter, centimeter
+jarakDalamCM: integer
+sisaJarakDalamCm: integer
+kilometer, meter, centimeter: integer
 
 Algoritma: 
 
-input <- (distanceInCM)
+input <- (jarakDalamCM)
 
 kilometer <- distanceInCM div 100000
-restDistanceInCm <- distanceInCM mod 100000
+sisaJarakDalamCm <- distanceInCM mod 100000
 
-meter <- restDistanceInCm div 100
-centimeter <- restDistanceInCm mod 100
+meter <- sisaJarakDalamCm div 100
+centimeter <- sisaJarakDalamCm mod 100
 
 output(kilometer, 'km', meter, 'm', centimeter, 'cm')

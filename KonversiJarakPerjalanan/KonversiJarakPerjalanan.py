@@ -2,12 +2,12 @@
 # I.F User memasukkan jarak dalam satuan cm
 # F.S Menampilkan jarak dalam format km, m, cm
 
-distanceInCM =  int(input('Masukkan jarak dalam cm : '))
+jarakDalamCM =  int(input('Masukkan jarak dalam cm : '))
 
-kilometer = distanceInCM // 100000
-restDistanceInCm = distanceInCM % 100000
+kilometer = jarakDalamCM // 100000
+sisaJarakDalamCm = jarakDalamCM % 100000
 
-meter = restDistanceInCm // 100
-centimeter = restDistanceInCm % 100
+meter = sisaJarakDalamCm // 100
+centimeter = sisaJarakDalamCm % 100
 
 print(kilometer, 'km', meter, 'm', centimeter, 'cm')
